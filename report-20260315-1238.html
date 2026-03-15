@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Executive Report · Campaign 198 (10차 재진행)</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0d1117;
+      --panel: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #a1b1c7;
+      --accent: #2f81f7;
+      --accent-soft: rgba(47,129,247,0.2);
+      --danger: #f85149;
+      --pending: #f0b429;
+      --font: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+    }
+    * { box-sizing: border-box; font-family: var(--font); }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 40px;
+    }
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+    .header-top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .workflow {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .meta {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+    .badge {
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: 1px solid;
+    }
+    .badge.pass { color: #3fb950; border-color: #3fb950; background: rgba(63,185,80,0.1); }
+    .badge.pending { color: var(--pending); border-color: var(--pending); background: rgba(240,180,41,0.12); }
+    .summary {
+      background: var(--accent-soft);
+      border: 1px solid var(--accent);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    section { margin-bottom: 32px; }
+    section h2 {
+      font-size: 16px;
+      margin: 0 0 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    .coverage {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+      gap: 16px;
+    }
+    .coverage-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .coverage-card .label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .progress {
+      position: relative;
+      height: 8px;
+      border-radius: 999px;
+      background: #0b0f16;
+      overflow: hidden;
+    }
+    .progress span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      border-radius: 999px;
+    }
+    .progress.pass span { background: #3fb950; }
+    .progress.pending span { background: var(--pending); }
+    details.job {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 12px;
+      padding: 14px 18px;
+    }
+    details summary {
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .job-meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+    .job-body {
+      margin-top: 14px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text);
+    }
+    ul.risks {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .conclusion {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 22px;
+      line-height: 1.7;
+    }
+    .conclusion strong {
+      color: var(--pending);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="header-top">
+        <div class="workflow">DEO · Campaign 198 EXECUTIVE REPORT (10차 재진행)</div>
+        <div class="badge pending">PENDING</div>
+      </div>
+      <div class="meta">
+        <div>Trigger · jyjang</div>
+        <div>Generated · 2026-03-15 12:38 UTC</div>
+      </div>
+      <div class="summary">
+        Flow·UI/UX·API 모두 PASS 상태지만 DB 반영은 권한 이슈로 미검증이라 전체 판정은 PENDING을 유지합니다. 환경 정리 후 DB·Flow 재검증이 필요합니다.
+      </div>
+    </header>
+
+    <section>
+      <h2>Test Coverage</h2>
+      <div class="coverage">
+        <div class="coverage-card">
+          <div class="label">Flow</div>
+          <div class="progress pass"><span style="width: 100%;"></span></div>
+        </div>
+        <div class="coverage-card">
+          <div class="label">UI / UX</div>
+          <div class="progress pass"><span style="width: 100%;"></span></div>
+        </div>
+        <div class="coverage-card">
+          <div class="label">API</div>
+          <div class="progress pass"><span style="width: 100%;"></span></div>
+        </div>
+        <div class="coverage-card">
+          <div class="label">DB</div>
+          <div class="progress pending"><span style="width: 35%;"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Jobs</h2>
+
+      <details class="job" open>
+        <summary>Tester1 · Flow (PASS)</summary>
+        <div class="job-meta">수동 end-to-end · 로그인 → 상세 → 신청 → 완료 화면</div>
+        <div class="job-body">
+          상세 페이지 진입, 신청 버튼 클릭, 신청 페이지 입력, 신청 완료 화면까지 이상 없이 수행되었습니다.
+          Flow 구간은 PASS로 판정했습니다.
+        </div>
+      </details>
+
+      <details class="job" open>
+        <summary>Tester3 · UI/UX (PASS)</summary>
+        <div class="job-meta">Playwright HTML 리포트 기반 시각 요소 확인</div>
+        <div class="job-body">
+          로그인 입력 필드/버튼, 캠페인 상세 DOM, “応募する” 버튼 노출, SNS 미연결 시 리다이렉트 UX까지 모두 정상입니다.
+        </div>
+      </details>
+
+      <details class="job" open>
+        <summary>Tester2 · API (PASS)</summary>
+        <div class="job-meta">자동화 JSON + 콘솔 로그</div>
+        <div class="job-body">
+          로그인/상세/신청 단계 API 호출이 200으로 응답하며 오류 로그가 없습니다. `/media/mediamain` 리다이렉트도 정상 확인되었습니다.
+        </div>
+      </details>
+
+      <details class="job" open>
+        <summary>Tester2 · DB (PENDING)</summary>
+        <div class="job-meta">권한 부족으로 직접 검증 불가</div>
+        <div class="job-body">
+          관리자/DB 권한 제한 때문에 반영 결과를 확인하지 못했습니다. 환경 정비 후 DB state 재검증이 필요합니다.
+        </div>
+      </details>
+    </section>
+
+    <section>
+      <h2>Risks & Action Items</h2>
+      <ul class="risks">
+        <li>DB 반영 상태를 확인하지 못한 채 판정을 확정하면 오판 가능성이 있습니다.</li>
+        <li>테스트 환경/권한 이슈가 계속되면 재검증 일정이 지연될 수 있습니다.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <div class="conclusion">
+        <strong>판정 · PENDING 유지</strong><br />
+        Flow / UI / API는 PASS지만 DB 검증이 완료될 때까지 전체 판정은 PENDING으로 유지합니다.
+        <br /><br />
+        <strong>다음 액션</strong><br />
+        환경 및 권한을 정상화한 뒤 DB·Flow 재검증을 수행하고 PASS로 확정 보고합니다.
+      </div>
+    </section>
+  </div>
+</body>
+</html>
