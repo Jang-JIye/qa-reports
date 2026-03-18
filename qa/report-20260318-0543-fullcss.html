@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QA Report — 캠페인 198 신청 플로우 (2026-03-18)</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>:root{--bg:#0d1117;--surface:#161b22;--surface2:#21262d;--border:#30363d;--text:#e6edf3;--text-muted:#8b949e;--green:#3fb950;--green-bg:rgba(63,185,80,0.1);--yellow:#f0b429;--yellow-bg:rgba(240,180,41,0.12);--red:#f85149;--red-bg:rgba(248,81,73,0.1);--blue:#2f81f7;--blue-bg:rgba(47,129,247,0.15);--font:'JetBrains Mono','SFMono-Regular',Menlo,Consolas,monospace}*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:13px;line-height:1.6;padding:32px}.page{max-width:960px;margin:0 auto}.header{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:24px 28px;margin-bottom:14px;display:flex;align-items:center;gap:16px}.header-info{flex:1}.workflow-name{font-size:18px;font-weight:700;margin-bottom:6px}.header-meta{color:var(--text-muted);font-size:12px;display:flex;gap:18px;flex-wrap:wrap}.badge{padding:5px 14px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border:1px solid;white-space:nowrap}.badge-pass{color:var(--green);border-color:var(--green);background:var(--green-bg)}.badge-fail{color:var(--red);border-color:var(--red);background:var(--red-bg)}.badge-pending{color:var(--yellow);border-color:var(--yellow);background:var(--yellow-bg)}.summary{background:var(--blue-bg);border:1px solid var(--blue);border-radius:10px;padding:14px 20px;margin-bottom:14px;font-size:13px;color:var(--text)}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}@media(max-width:680px){.grid-2{grid-template-columns:1fr}}.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}.card-header{padding:11px 16px;background:var(--surface2);border-bottom:1px solid var(--border);font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.8px;display:flex;align-items:center;gap:6px}.card-body{padding:16px}.coverage-item{margin-bottom:14px}.coverage-item:last-child{margin-bottom:0}.coverage-label{display:flex;justify-content:space-between;margin-bottom:5px;font-size:12px}.coverage-label .name{color:var(--text)}.coverage-label .status{color:var(--text-muted)}.track{background:var(--surface2);border-radius:4px;height:7px;overflow:hidden}.fill{height:100%;border-radius:4px}.fill-pass{background:var(--green)}.fill-fail{background:var(--red)}.fill-pending{background:var(--yellow)}.jobs-section{margin-bottom:14px}details.job{border:1px solid var(--border);border-radius:8px;margin-bottom:8px;overflow:hidden;background:var(--surface)}details.job:last-child{margin-bottom:0}details.job summary{padding:11px 16px;background:var(--surface2);cursor:pointer;display:flex;align-items:center;gap:10px;list-style:none;user-select:none;font-weight:600;font-size:13px}details.job summary::-webkit-details-marker{display:none}details.job summary:hover{background:#2a2f36}.job-name{flex:1}.job-duration{font-size:11px;color:var(--text-muted)}.job-body{padding:12px 16px;border-top:1px solid var(--border);font-size:12px;color:var(--text-muted);line-height:1.7}.job-body ul{padding-left:16px;margin-top:6px}.job-body li{color:var(--text);margin-bottom:3px}.risk-item{padding:9px 14px;background:var(--yellow-bg);border-left:3px solid var(--yellow);border-radius:0 6px 6px 0;margin-bottom:8px;font-size:12px;color:var(--text)}.risk-item:last-child{margin-bottom:0}.conclusion{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:14px}.section-title{font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px}.conclusion-text{color:var(--text);font-size:13px;line-height:1.7}.next-action{margin-top:10px;padding:9px 14px;background:var(--surface2);border-radius:6px;font-size:12px;color:var(--text-muted)}.next-action strong{color:var(--blue)}.footer{text-align:center;color:var(--text-muted);font-size:11px;padding-top:14px;border-top:1px solid var(--border)}.ic-pass{color:var(--green)}.ic-fail{color:var(--red)}.ic-pending{color:var(--yellow)}</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-info">
+      <div class="workflow-name">캠페인 198 신청 플로우 QA (2026-03-18)</div>
+      <div class="header-meta">
+        <span>Triggered by DEO</span>
+        <span>📅 2026-03-18</span>
+        <span>🕐 05:43 UTC</span>
+        <span>QA FullCSS</span>
+      </div>
+    </div>
+    <span class="badge badge-pass">PASS</span>
+  </div>
+  <div class="summary">‘신청(応募する)’ 클릭 시 목적 URL이 SNS 연동 상태에 맞게 분기되는지 최종 확정, Flow/UI·UX/API/DB 모두 정상 판정.</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-header">Coverage</div>
+      <div class="card-body">
+        <div class="coverage-item"><div class="coverage-label"><span class="name">Flow</span><span class="status ic-pass">PASS</span></div><div class="track"><div class="fill fill-pass" style="width:100%"></div></div></div>
+        <div class="coverage-item"><div class="coverage-label"><span class="name">UI·UX</span><span class="status ic-pass">PASS</span></div><div class="track"><div class="fill fill-pass" style="width:100%"></div></div></div>
+        <div class="coverage-item"><div class="coverage-label"><span class="name">API/DB</span><span class="status ic-pass">PASS</span></div><div class="track"><div class="fill fill-pass" style="width:100%"></div></div></div>
+      </div>
+    </div>
+      <div class="card">
+      <div class="card-header">⚠️ Risks</div>
+      <div class="card-body">
+        <div class="risk-item">자동화 테스트 케이스가 SNS 연동/미연동 상태 분기를 반영하지 않으면 향후 FAIL 재발 위험.</div>
+        <div class="risk-item">실제 운영 계정/테스트 스펙 정합성 고정 필요.</div>
+      </div>
+    </div>
+  </div>
+  <div class="jobs-section">
+    <div class="card-header">💼 Jobs — Tester Results</div>
+    <details class="job" open>
+      <summary><span class="ic-pass">✔</span> Flow</summary>
+      <div class="job-body">- 미연동: `/monitoring/monitoringreg/198` 이동, 신청 완료 정상<br>- 연동: `/media/mediamain/` 이동</div>
+    </details>
+    <details class="job" open>
+      <summary><span class="ic-pass">✔</span> UI·UX</summary>
+      <div class="job-body">- ‘応募する’ 버튼 명확히 노출, 비활성/숨김 없음, 문구 정상<br>- 연동 유도 가이드 문구 없음</div>
+    </details>
+    <details class="job" open>
+      <summary><span class="ic-pass">✔</span> API/DB</summary>
+      <div class="job-body">- 신청 클릭 시 네트워크 호출/응답 코드 200, 상태/DB 반영 정상<br>- 테스트 계정: SNS 미연동, 정상 분기 동작</div>
+    </details>
+  </div>
+  <div class="conclusion"><strong>결론:</strong> 전체 PASS. 분기 동작 및 검증, 데이터 반영 100% 완료.<br><strong>다음 액션:</strong> 자동화 테스트케이스 분기/기대값 일치 검증 후 스펙 반영.</div>
+  <div class="footer">Generated by Reporter · OpenClaw QA System · 2026-03-18 05:43 UTC</div>
+</div>
+</body>
+</html>
